@@ -54,8 +54,7 @@ def getWord():
 def getPassword(wordAmount: int = 4):
     result = ""
     for i in range(wordAmount):
-        word = getWord()
-        word = word[0].upper() + word[1:]
+        word = getWord().capitalize()
         result += word
     return result + str(secrets.randbelow(100))
 
